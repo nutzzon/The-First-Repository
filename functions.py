@@ -19,7 +19,6 @@ def firstfunc(x, y):
     return y.replace('_', str(x))
 
 
-
 def secondfunc(first, second, input = '+'):
     '''
     'makes operation based on inputs'
@@ -48,9 +47,44 @@ def secondfunc(first, second, input = '+'):
         return first+second
 
 
+def thirdfunc(f, s, ip='+'):
+    '''
+    Documentation
+    ---------------------
+    DESC:
+        this functions applies the operation to two integers / floats and 
+        returns the value of gotten from the applied function.
+
+    PARAMS: f, s, ip
+        f: integer / float; first argument
+        s: integer / float; second argument
+        ip: operation symbol; optionsal 
+
+    OUTPUT: integer / float
+        the value from the chosen operation
+
+    EXAMPLE:
+        >>> secondfunc(4, 3, ip='-')
+        out: 1
+    '''
+
+    if ip == '-':
+        return f - s
+    elif ip == ':':
+        return f / s
+    elif ip == '*':
+        return f*s
+    else:
+        return f + s
+
+
+# first function
+
 print(firstfunc(25, 'hi! my name is Richard and I am _ years old. This means\
                     that we I have been on this planet _ years.'))
 
-print('------------------')
+# second function
 
-print(secondfunc(25, 30, ':')) 
+x = thirdfunc(25, 5, ':')
+print(x)
+
